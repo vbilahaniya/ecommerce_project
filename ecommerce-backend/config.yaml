@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-config
+data:
+  POSTGRES_HOST: "postgres-service"
+  DATABASE_URL: "postgres://postgres:newpassword@postgres-service:5432/ecommerce"
+  POSTGRES_DB: "ecommerce"
+  POSTGRES_USER: "postgres"
+  POSTGRES_PASSWORD: "newpassword"
+  POSTGRES_PORT: "5432"
